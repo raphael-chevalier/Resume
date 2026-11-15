@@ -48,6 +48,9 @@
 		Template Colors
 	-->
 	<link rel="stylesheet" href="css/demos/demo-4-colors.css" />
+
+	<!-- Layout overrides (loaded last) -->
+	<link rel="stylesheet" href="css/custom.css" />
 	<!--<link rel="stylesheet" href="css/template-colors/blue.css" />-->
 	<!--<link rel="stylesheet" href="css/template-colors/orange.css" />-->
 	<!--<link rel="stylesheet" href="css/template-colors/pink.css" />-->
@@ -103,13 +106,7 @@
 				<!-- header profile -->
 				<div class="profile">
 					<div class="title">Chevalier Raphael</div>
-					<div class="subtitle subtitle-typed">
-						<div class="typing-title">
-							<p>Designer</p>
-							<p>Photographer</p>
-							<p>Artist</p>
-						</div>
-					</div>
+					<div class="subtitle">Ingénieur informatique – Chef de projet développeur</div>
 				</div>
 
 
@@ -128,26 +125,21 @@
 					<!-- profile image -->
 					<div class="slide" style="background-image: url(images/photoprofile.PNG);"></div>
 
-					<!-- profile titles -->
-					<div class="title">Chevalier Raphael</div>
-					<div class="subtitle subtitle-typed">
-						<div class="typing-title">
-							<p>Ingénieur Dev Informatique</p>
-							<p>Développeur FullStack</p>
+					<!-- profile titles & socials -->
+					<div class="profile-text">
+						<div class="title">Chevalier Raphael</div>
+						<div class="subtitle">Ingénieur informatique – Chef de projet développeur</div>
+
+						<!-- profile socials -->
+						<div class="social">
+							<a target="_blank" href="https://github.com/raphael-chevalier">
+								<span class="fa fa-github"></span>
+							</a>
+							<a target="_blank" href="https://www.linkedin.com/in/rapha%C3%ABl-chevalier-natup-b350831b7/">
+								<span class="fa fa-linkedin"></span>
+							</a>
 						</div>
 					</div>
-
-					<!-- profile socials -->
-					<div class="social">
-						<a target="_blank" href="https://github.com/raphael-chevalier">
-							<span class="fa fa-github"></span>
-						</a>
-						<a target="_blank" href="https://www.linkedin.com/in/rapha%C3%ABl-chevalier-natup-b350831b7/">
-							<span class="fa fa-linkedin"></span>
-						</a>
-					</div>
-
-
 
 				</div>
 
@@ -160,6 +152,30 @@
 				<div class="card-wrap">
 
 					<!--
+						About
+					-->
+					<div class="content about">
+
+						<!-- title -->
+						<div class="title">Profil</div>
+
+						<!-- profile text -->
+						<div class="text-box">
+							<p>
+								Ingénieur informatique (Bac+5), 3 ans en DSI comme chef de projet développeur. Je pilote des projets applicatifs de bout en bout, du cadrage avec les métiers à la mise en production, en coordonnant équipes techniques, éditeurs et prestataires. Double compétence technique (C# / .NET, SQL Server) et fonctionnelle.
+							</p>
+						</div>
+
+						<!-- contact & languages -->
+						<ul class="contact-box">
+							<li><i class="fa fa-map-marker"></i><strong>Localisation</strong><span>Sotteville-lès-Rouen</span></li>
+							<li><i class="fa fa-envelope"></i><strong>E-mail</strong><a href="mailto:raphe.chevalierpro@gmail.com">raphe.chevalierpro@gmail.com</a></li>
+							<li><i class="fa fa-language"></i><strong>Anglais</strong><span>Professionnel (TOEIC 800)</span></li>
+						</ul>
+
+					</div>
+
+					<!--
 						Resume
 					-->
 					<div class="content resume">
@@ -167,127 +183,119 @@
 						<!-- title -->
 						<div class="title">Resume</div>
 
-						<!-- content -->
-						<div class="row">
-
-							<!-- experience -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="fa fa-briefcase"></i></div>
-									<div class="name">Experience</div>
+						<!-- experience (full width) -->
+						<div class="resume-block">
+							<div class="resume-title border-line-h">
+								<div class="icon"><i class="fa fa-briefcase"></i></div>
+								<div class="name">Experience</div>
+							</div>
+							<div class="resume-items">
+								<div class="resume-item border-line-h active">
+									<div class="date">Décembre 2023 - Aujourd'hui</div>
+									<div class="name">Ingénieur chef de projet développeur</div>
+									<div class="company">NatUp, groupe coopératif agricole - Rouen</div>
+									<ul class="resume-points">
+										<li><strong>Pilotage d'une dizaine de projets applicatifs en 3 ans :</strong> estimations, planning, suivi, comités projet (COPROJ).</li>
+										<li><strong>Facturation électronique (en cours) :</strong> mise en conformité des ERP des sociétés du groupe ; interface de dépôt des factures de l'ERP AX sur le SFTP de la plateforme agréée, premier Data Hub des fiches fournisseurs.</li>
+										<li><strong>Décommissionnement d'un serveur historique (en cours) :</strong> analyse de tous les flux hébergés, risques de sécurité, migration.</li>
+										<li><strong>ETL comptable :</strong> intégration automatique des factures fournisseurs dans l'ERP Microsoft Dynamics AX.</li>
+										<li><strong>Interlocuteur opérationnel des éditeurs et prestataires :</strong> planning, SLA, contrats, contrôle des livrables.</li>
+										<li><strong>Recette :</strong> rédaction et exécution des tests, accompagnement des utilisateurs, mise en production.</li>
+										<li>Développement en C# / .NET Core, SQL Server, Clean Architecture.</li>
+									</ul>
 								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date">Décembre 2023 - Aujourd'hui</div>
-										<div class="name">Ingénieur Chef de projet en Etude & Développement</div>
-										<div class="company">NatUp</div>
-										<p>
-											Analyse des besoins, conception technique, coordination des projets et développement des logiciels, dans le but d'optimiser les processus internes
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">2022 - 2023</div>
-										<div class="name">Developpeur FullStack</div>
-										<div class="name"><i>Contrat de professionnalisation</i></div>
-										<div class="company">Groupe FrameIP - 13 mois</div>
-										<p>
-											Contribution à la conceptions des applications métiers pour des besoins internes au groupe.
-										</p>
-										<p>
-											Assurer la maintenance et l'évolution des applications.
-										</p>
-									</div>
-									<div class="resume-item">
-										<div class="date">2022</div>
-										<div class="name">Assistant chercheur IT</div>
-										<div class="name"><i>Stage</i></div>
-										<div class="company">Université de Cluj Napoca - 5 mois</div>
-										<p>
-											Réalisation d'un projet concernant la simulation de réseaux 6LoWPAN  entre IOT.
-										</p>
-										<p>
-											Rédacion d'un article scientifique soumis à la conférence AQTR 2022.
-										</p>
-									</div>
-									<div class="resume-item">
-										<div class="date">2021</div>
-										<div class="name">Developpeur FullStack</div>
-										<div class="name"><i>Stage</i></div>
-										<div class="company">Grant Thornton - 4 mois</div>
-										<p>
-											Réalisation d'automatisation sur l'intégration de fichiers Excel dans l'ERP comptable.
-										</p>
-									</div>
+								<div class="resume-item border-line-h">
+									<div class="date">Juillet 2022 - Août 2023</div>
+									<div class="name">Développeur web</div>
+									<div class="name"><i>Alternance</i></div>
+									<div class="company">FrameIP, opérateur télécom et internet pour les entreprises</div>
+									<ul class="resume-points">
+										<li><strong>Outil de ticketing interne :</strong> workflow des demandes, circuit de validation, suivi des statuts.</li>
+										<li><strong>TMA de l'ERP interne :</strong> diagnostic et correction d'anomalies de facturation.</li>
+									</ul>
+								</div>
+								<div class="resume-item border-line-h">
+									<div class="date">Octobre 2021 - Mai 2022</div>
+									<div class="name">Assistant chercheur en informatique</div>
+									<div class="company">Université technique de Cluj-Napoca - Roumanie</div>
+									<ul class="resume-points">
+										<li>Simulation de réseaux 6LoWPAN (Mininet-WiFi).</li>
+										<li>Article en anglais publié à la conférence AQTR 2022 (IEEE Xplore).</li>
+									</ul>
+								</div>
+								<div class="resume-item">
+									<div class="date">2021</div>
+									<div class="name">Développeur full stack</div>
+									<div class="name"><i>Stage</i></div>
+									<div class="company">Grant Thornton - 5 mois</div>
+									<ul class="resume-points">
+										<li>Automatisation de l'intégration de fichiers Excel dans l'ERP comptable.</li>
+									</ul>
 								</div>
 							</div>
+						</div>
 
-							<!-- education -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="fa fa-university"></i></div>
-									<div class="name">Formation</div>
+						<!-- education -->
+						<div class="resume-block">
+							<div class="resume-title border-line-h">
+								<div class="icon"><i class="fa fa-university"></i></div>
+								<div class="name">Formation</div>
+							</div>
+							<div class="card-grid card-grid-3">
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2020 - 2023</span></div>
+									<div class="card-name">Diplôme d'ingénieur en informatique (Bac+5)</div>
+									<div class="card-company">CESI École d'ingénieurs - Rouen</div>
 								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h">
-										<div class="date">2020 - 2023</div>
-										<div class="name">Ecole d'ingénieur</div>
-										<div class="company">Cesi de Rouen</div>
-										<p>
-											Diplomé en Ingenieur Informatique spécialisé en Développement
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">2018 - 2020</div>
-										<div class="name">Classe préparatoires</div>
-										<div class="company">Lycée Marcel Sembat</div>
-										<p>
-											Classe préparatoires aux grandes Ecoles
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">2018</div>
-										<div class="name">Bacalaureat</div>
-										<div class="company">Rouen</div>
-										<p>
-											Bacalaureat STI2D mention Bien
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-									</div>
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2018 - 2020</span></div>
+									<div class="card-name">Classe préparatoire TSI</div>
+									<div class="card-company">Lycée Marcel Sembat</div>
 								</div>
-								<p></p>
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="fa fa-terminal"></i></div>
-									<div class="name">Divers Projets</div>
-									<div class="resume-items">
-																														<div class="resume-item border-line-h">
-											<div class="date">2025</div>
-											<div class="name">Projet MyERP</div>
-											<div class="company">Projet personnel</div>
-											<p>
-												Réalisation d'un ERP sur le framework .NET + react
-											</p>
-										</div>
-										<div class="resume-item border-line-h">
-											<div class="date">2023</div>
-											<div class="name">Jeu Vidéo FPS/TPS VR</div>
-											<div class="company">Cesi de Rouen</div>
-											<p>
-												Développement d'un jeu vidéo sur Unity TPS clavier souris et FPS pour les joueus casque de réalité virtuel
-											</p>
-										</div>
-										<div class="resume-item border-line-h">
-											<div class="date">2022</div>
-											<div class="name">Modélisation 3D</div>
-											<div class="company">Projet personnel</div>
-											<p>
-												Réalisation de divers modèles 3D grace au logiciel Blender
-											</p>
-										</div>
-									</div>
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2018</span></div>
+									<div class="card-name">Baccalauréat scientifique, mention Bien</div>
+									<div class="card-company">Rouen</div>
 								</div>
 							</div>
-							<div class="clear"></div>
+						</div>
+
+						<!-- projects -->
+						<div class="resume-block">
+							<div class="resume-title border-line-h">
+								<div class="icon"><i class="fa fa-terminal"></i></div>
+								<div class="name">Divers Projets</div>
+							</div>
+							<div class="card-grid">
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">En cours</span><span class="badge">Projet personnel</span></div>
+									<div class="card-name">Riftbound Manager</div>
+									<p>
+										Application de suivi de collection de cartes Riftbound, utilisée par un groupe d'amis : cartes possédées, statistiques, propositions d'échanges entre membres.
+									</p>
+								</div>
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2025</span><span class="badge">Projet personnel</span></div>
+									<div class="card-name">Projet MyERP</div>
+									<p>
+										Réalisation d'un ERP sur le framework .NET + react
+									</p>
+								</div>
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2023</span><span class="badge">Cesi de Rouen</span></div>
+									<div class="card-name">Jeu Vidéo FPS/TPS VR</div>
+									<p>
+										Développement d'un jeu vidéo sur Unity TPS clavier souris et FPS pour les joueus casque de réalité virtuel
+									</p>
+								</div>
+								<div class="mini-card">
+									<div class="card-meta"><span class="badge badge-date">2022</span><span class="badge">Projet personnel</span></div>
+									<div class="card-name">Modélisation 3D</div>
+									<p>
+										Réalisation de divers modèles 3D grace au logiciel Blender
+									</p>
+								</div>
+							</div>
 						</div>
 
 					</div>
@@ -300,79 +308,67 @@
 						<!-- title -->
 						<div class="title">Mes Compétences</div>
 
-						<!-- content -->
-						<div class="row">
-
-							<!-- skill item -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="skills-list circles">
-									<div class="skill-title border-line-h">
-										<div class="icon"><i class="fa fa-code"></i></div>
-										<div class="name">Langages de Programmation</div>
-										<div class="name">& Frameworks</div>
-									</div>
-									<ul>
-										<li>
-											<div class="name">C#</div>
-											<div class="progress p90">
-												<span>80%</span>
-											</div>
-										</li>
-										<li>
-											<div class="name">React</div>
-											<div class="progress p75">
-												<span>65%</span>
-											</div>
-										</li>
-										<li>
-											<div class="name">Python</div>
-											<div class="progress p85">
-												<span>65%</span>
-											</div>
-										</li>
-										<li>
-											<div class="name">SQL</div>
-											<div class="progress p95">
-												<span>70%</span>
-											</div>
-										</li>
-									</ul>
-								</div>
+						<!-- skill groups -->
+						<div class="skill-groups">
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-tasks"></i>Pilotage</div>
+								<ul class="chips">
+									<li>Cadrage</li>
+									<li>Estimation des charges</li>
+									<li>Planning</li>
+									<li>Gestion des risques</li>
+									<li>COPROJ</li>
+								</ul>
 							</div>
-
-							<!-- skill item -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="skills-list list">
-									<div class="skill-title border-line-h">
-										<div class="icon"><i class="fa fa-list"></i></div>
-										<div class="name">Connaissances</div>
-									</div>
-									<ul>
-										<li>
-											<div class="name">Angular</div>
-										</li>
-										<li>
-											<div class="name">Bonnes pratiques de CyberSécurité</div>
-										</li>
-										<li>
-											<div class="name">Environnement GitLab</div>
-										</li>
-										<li>
-											<div class="name">Recueil des besoins</div>
-										</li>
-										<li>
-											<div class="name">Accompagnement du changement</div>
-										</li>
-										<li>
-											<div class="name">Maintenance du Legacy</div>
-										</li>
-										<li>
-											<div class="name">Travail en équipe</div>
-										</li>
-									</ul>
-								</div>
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-handshake-o"></i>Prestataires</div>
+								<ul class="chips">
+									<li>Suivi des SLA</li>
+									<li>Contrats</li>
+									<li>Contrôle des livrables</li>
+								</ul>
 							</div>
-							<div class="clear"></div>
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-comments"></i>Fonctionnel</div>
+								<ul class="chips">
+									<li>Recueil des besoins</li>
+									<li>Spécifications</li>
+									<li>User stories</li>
+									<li>Recette</li>
+								</ul>
+							</div>
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-code"></i>Technique</div>
+								<ul class="chips">
+									<li>C#</li>
+									<li>.NET Core</li>
+									<li>Entity Framework</li>
+									<li>SQL Server</li>
+									<li>React</li>
+									<li>Angular</li>
+									<li>TypeScript</li>
+									<li>API REST</li>
+									<li>Git</li>
+									<li>CI/CD</li>
+									<li>IIS</li>
+								</ul>
+							</div>
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-briefcase"></i>Métier</div>
+								<ul class="chips">
+									<li>Facturation électronique</li>
+									<li>Flux comptables</li>
+									<li>ERP Microsoft Dynamics AX</li>
+									<li>Sage</li>
+								</ul>
+							</div>
+							<div class="skill-group">
+								<div class="skill-group-title"><i class="fa fa-refresh"></i>Méthodes</div>
+								<ul class="chips">
+									<li>Agile / Scrum</li>
+									<li>Cycle en V</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,335 @@
+/*
+	Layout overrides for the CV.
+	Loaded after the template and theme stylesheets.
+	Primary color matches css/demos/demo-4-colors.css (#4f53f6).
+*/
+
+/*
+	Left card: photo on top, name block centered in the remaining space
+*/
+.card-started .profile.no-photo .slide {
+	height: 62%;
+}
+
+.card-started .profile .profile-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 62%;
+	bottom: 0;
+	padding: 0 30px 10px 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	z-index: 2;
+}
+
+.card-started .profile.no-photo .profile-text .title {
+	margin-top: 0;
+	line-height: 1.2;
+}
+
+/* fixed subtitle (no typing animation): let it wrap without a fixed height */
+.card-started .profile .subtitle {
+	margin-top: 8px;
+	display: block;
+	height: auto;
+	max-width: 340px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* one-shot entrance: subtitle rises in, then a short accent line draws under it */
+.card-started .profile .subtitle {
+	animation: subtitle-in 0.6s ease-out 0.3s both;
+}
+
+.card-started .profile .subtitle:after {
+	content: '';
+	display: block;
+	margin: 8px auto 0 auto;
+	width: 48px;
+	height: 2px;
+	background: #4f53f6;
+	transform: scaleX(0);
+	animation: line-draw 0.5s ease-out 0.9s forwards;
+}
+
+@keyframes subtitle-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes line-draw {
+	to {
+		transform: scaleX(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card-started .profile .subtitle,
+	.card-started .profile .subtitle:after {
+		animation: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.header .profile .subtitle {
+	height: auto;
+	white-space: normal;
+}
+
+@media (max-width: 1199px) {
+	.card-started .profile {
+		height: 560px;
+	}
+	.card-started .profile.no-photo .slide {
+		height: 60%;
+	}
+	.card-started .profile .profile-text {
+		top: 60%;
+	}
+}
+
+@media (max-width: 560px) {
+	.card-started .profile {
+		height: 520px;
+		min-height: 0;
+	}
+	.card-started .profile .profile-text .title {
+		font-size: 30px;
+	}
+}
+
+/*
+	Shared rhythm: same paddings, line-height and spacing in every section
+*/
+.card-inner .card-wrap p,
+.card-inner .card-wrap li {
+	line-height: 1.6;
+}
+
+.content .text-box p {
+	margin: 0;
+}
+
+/* same gap under every section title (the template got it from .row .col padding) */
+.content > .title + * {
+	margin-top: 30px;
+}
+
+.resume-block + .resume-block {
+	margin-top: 40px;
+}
+
+.resume-block .resume-title {
+	margin-bottom: 4px;
+}
+
+/*
+	Profile
+*/
+.content.about .text-box p {
+	max-width: 70ch;
+}
+
+.contact-box {
+	margin: 20px 0 0 0;
+	padding: 12px 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 24px;
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.contact-box li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0 6px;
+	min-width: 0;
+}
+
+.contact-box li i {
+	width: 14px;
+	text-align: center;
+	color: #4f53f6;
+}
+
+.contact-box li strong {
+	color: #323232;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.contact-box li strong:after {
+	content: ' :';
+}
+
+.contact-box li a {
+	color: #4f53f6;
+	overflow-wrap: anywhere;
+}
+
+/*
+	Experience: bullet lists
+*/
+.resume-items .resume-item {
+	padding: 24px 0;
+}
+
+.resume-items .resume-item .company {
+	margin-bottom: 10px;
+}
+
+.resume-points {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.resume-points li {
+	position: relative;
+	margin: 0 0 8px 0;
+	padding-left: 18px;
+	font-size: 15px;
+}
+
+.resume-points li:last-child {
+	margin-bottom: 0;
+}
+
+.resume-points li:before {
+	content: '';
+	position: absolute;
+	left: 2px;
+	top: 0.65em;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #4f53f6;
+}
+
+.resume-points li strong {
+	color: #323232;
+	font-weight: 500;
+}
+
+/*
+	Education & projects: equal-height card grids
+*/
+.card-grid {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+.card-grid.card-grid-3 {
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.mini-card {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+	min-width: 0;
+}
+
+.card-meta {
+	margin: 0 0 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.badge {
+	padding: 0 6px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999999;
+	border: 1px solid #eeeeee;
+	white-space: nowrap;
+}
+
+.badge.badge-date {
+	color: #4f53f6;
+	border-color: #4f53f6;
+}
+
+.mini-card .card-name {
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: #323232;
+}
+
+.mini-card .card-company {
+	margin-top: 4px;
+	font-size: 14px;
+	color: #999999;
+}
+
+.mini-card p {
+	margin: 8px 0 0 0;
+	font-size: 14px;
+}
+
+/*
+	Skills: chips grouped by category
+*/
+.skill-groups {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 24px 30px;
+}
+
+.skill-group-title {
+	margin: 0 0 12px 0;
+	padding: 0 0 8px 0;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #323232;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.skill-group-title i {
+	width: 18px;
+	text-align: center;
+	color: #4f53f6;
+}
+
+.chips {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	list-style: none;
+}
+
+.chips li {
+	padding: 3px 10px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #4f53f6;
+	background: rgba(79, 83, 246, 0.07);
+	border: 1px solid rgba(79, 83, 246, 0.2);
+	border-radius: 14px;
+}
