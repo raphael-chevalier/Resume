@@ -111,6 +111,19 @@
 }
 
 /*
+	Page fade-in: template uses 1s, keep it short
+*/
+.card-inner {
+	transition: visibility 0.3s linear, opacity 0.3s linear;
+	-webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.animated {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+}
+
+/*
 	Shared rhythm: same paddings, line-height and spacing in every section
 */
 .card-inner .card-wrap p,
